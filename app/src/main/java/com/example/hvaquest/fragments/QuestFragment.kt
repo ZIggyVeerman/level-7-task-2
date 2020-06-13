@@ -6,8 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hvaquest.R
+import com.example.hvaquest.viewmodel.QuestViewModel
 
 class QuestFragment : Fragment() {
+
+    private lateinit var viewModel: QuestViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,10 +22,12 @@ class QuestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        observeViewModel()
+    }
 
-        //        view.findViewById<Button>(R.id.button_second).setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-//        }
+    private fun observeViewModel() {
 
     }
+
+
 }

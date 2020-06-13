@@ -5,10 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 
 import com.example.hvaquest.R
+import com.example.hvaquest.viewmodel.QuestViewModel
+import kotlinx.android.synthetic.main.fragment_finish.*
 
 class FinishFragment : Fragment() {
+
+    private lateinit var questViewModel: QuestViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,8 +26,9 @@ class FinishFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+        btFinish.setOnClickListener {
+            questViewModel.resetQuestion()
+            findNavController().navigate(R.id.action_FinishFragment_to_FirstFragment)
+        }
     }
 }
