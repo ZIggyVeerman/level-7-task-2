@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.hvaquest.R
+import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
 
@@ -20,8 +22,9 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+        btStart.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_QuestFragment)
+
+        }
     }
 }
