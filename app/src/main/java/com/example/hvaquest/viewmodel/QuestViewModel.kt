@@ -14,6 +14,10 @@ class QuestViewModel : ViewModel() {
     var currentQuestion = MutableLiveData<Question>()
     var finish = MutableLiveData<Boolean>()
 
+    init {
+        resetQuestion()
+    }
+
     fun nextQuestion() {
         questId++
         currentQuestId.value = questId
