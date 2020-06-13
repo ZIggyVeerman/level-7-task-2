@@ -7,35 +7,38 @@
     tools:context=".fragments.FirstFragment">
 
     <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvFinish"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Welcome"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Finish"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Info"
-        app:layout_constraintEnd_toEndOf="@+id/tvWelcome"
-        app:layout_constraintStart_toStartOf="@+id/tvWelcome"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+    <ImageView
+        android:id="@+id/ivCake"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/ic_cake_green_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btFinish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFinish"
+        tools:ignore="ContentDescription" />
 
     <Button
-        android:id="@+id/btStart"
-        android:layout_width="wrap_content"
+        android:id="@+id/btFinish"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:padding="40dp"
-        android:text="start"
+        android:text="Finish"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,22 +7,36 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.hvaquest.FirstFragment"
+        android:name="com.example.hvaquest.fragments.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/LocationFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.hvaquest.SecondFragment"
+        android:id="@+id/LocationFragment"
+        android:name="com.example.hvaquest.fragments.LocationFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_location">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QuestFragment"
+        android:name="com.example.hvaquest.fragments.QuestFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_quest">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FinishFragment"
+        android:name="com.example.hvaquest.fragments.FinishFragment"
+        tools:layout="@layout/fragment_finish">
+
     </fragment>
 </navigation>
